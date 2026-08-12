@@ -1,0 +1,36 @@
+site_name: The Lab RP Penal Code
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: black
+    accent: light green
+  features:
+    - navigation.sections
+    - content.action.edit
+
+repo_url: https://github.com/zyngine/The-Lab-RP-Penal-Code
+repo_name: zyngine/The-Lab-RP-Penal-Code
+edit_uri: edit/main/docs/
+
+# The ==highlight== syntax, matched to the dashboard renderer.
+hooks:
+  - hooks/highlights.py
+
+extra_css:
+  - assets/highlights.css
+
+exclude_docs: |
+  SUMMARY.md
+
+markdown_extensions:
+  - tables
+  - admonition
+  - attr_list
+
+nav:
+  - Overview: index.md
+  - Infractions: infractions.md
+  - Misdemeanors: misdemeanors.md
+  - Felonies: felonies.md

@@ -1,0 +1,15 @@
+/* Highlights, matched to the staff dashboard so a rule looks the same
+   in both places. Four fixed meanings, not free colour. */
+
+.md-typeset mark.hl {
+  background: rgba(126, 211, 33, 0.16);
+  color: inherit;
+  padding: 1px 6px;
+  border-radius: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.md-typeset mark.hl.danger  { background: rgba(255, 69, 58, 0.18); }
+.md-typeset mark.hl.caution { background: rgba(255, 159, 10, 0.18); }
+.md-typeset mark.hl.ok      { background: rgba(48, 209, 88, 0.18); }
