@@ -1,4 +1,3 @@
-# Builds the public site on every push to main.
 name: docs
 
 on:
