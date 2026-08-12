@@ -56,7 +56,14 @@ for (const cls of CLASSES) {
 
 /* The landing page. Deliberately does not restate any charge — a second
    copy of a fine is a second thing to forget to update. */
-const heaviest = [...rows].sort((a, b) => months(b[4]) - months(a[4]))[0];
+const money = s => parseInt(String(s).replace(/[^0-9]/g, ''), 10) || 0;
+
+/* Sorted by jail time, then by fine. Without the second key this picked
+   Terrorism over Assassination of an Elected Official — both 100 months,
+   but the fine differs by $50,000, and "heaviest" reading as whichever
+   happened to be listed first is worse than not saying it at all. */
+const heaviest = [...rows].sort((a, b) =>
+  months(b[4]) - months(a[4]) || money(b[5]) - money(a[5]))[0];
 
 writeFileSync(new URL('./docs/index.md', import.meta.url), [
   '# Penal Code',
@@ -69,7 +76,7 @@ writeFileSync(new URL('./docs/index.md', import.meta.url), [
   '',
   'Every charge has a code, a jail time in months and a fine. Both are',
   'the starting point, not the ceiling: a Judge sets the sentence, and',
-  'the [DOJ Trial Manual](https://github.com/zyngine/The-Lab-RP-DOJ)',
+  'the [DOJ Trial Manual](https://zyngine.github.io/The-Lab-RP-DOJ-Docs/trial-manual/)',
   'governs how that happens.',
   '',
   `The heaviest charge on the books is **${heaviest[2]}** (\`${heaviest[1]}\`)`,

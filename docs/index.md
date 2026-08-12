@@ -10,11 +10,11 @@
 
 Every charge has a code, a jail time in months and a fine. Both are
 the starting point, not the ceiling: a Judge sets the sentence, and
-the [DOJ Trial Manual](https://github.com/zyngine/The-Lab-RP-DOJ)
+the [DOJ Trial Manual](https://zyngine.github.io/The-Lab-RP-DOJ-Docs/trial-manual/)
 governs how that happens.
 
-The heaviest charge on the books is **Terrorism / Mass Violence** (`PC-3.08`)
-at 100 Months and $100,000.
+The heaviest charge on the books is **Assassination of an Elected Official** (`PC-3.14`)
+at 100 Months and $150,000.
 
 ## Changing a charge
 
